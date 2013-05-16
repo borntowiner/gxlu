@@ -1,0 +1,2 @@
+select count(*) from giscableterm t where t.termtype=6 and t.relatedgiscabletermid is null and 
+not exists (select 1 from gisdeviceassoc c where c.atermtype in (88,91) and c.aconnectorid is null and c.ztermid=t.id)
